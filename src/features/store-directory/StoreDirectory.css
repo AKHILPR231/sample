@@ -1,0 +1,227 @@
+.sd {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Filters ──────────────────────────────────────── */
+.sd-filters {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.sd-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 220px;
+  max-width: 320px;
+  height: 42px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  color: var(--muted);
+}
+
+.sd-search:focus-within {
+  border-color: var(--brand-blue);
+}
+
+.sd-search__input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--ink);
+}
+
+.sd-select {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--body);
+  font-weight: 600;
+}
+
+.sd-select__label {
+  color: var(--body);
+}
+
+.sd-select select {
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  cursor: pointer;
+  padding-right: 18px;
+  outline: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.sd-clear {
+  border: none;
+  background: transparent;
+  color: var(--brand-blue);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.sd-clear:disabled {
+  color: var(--faint);
+  cursor: default;
+}
+
+.sd-clear:not(:disabled):hover {
+  text-decoration: underline;
+}
+
+/* ── Table ────────────────────────────────────────── */
+.sd-tableWrap {
+  overflow-x: auto;
+}
+
+.sd-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 860px;
+}
+
+.sd-table thead th {
+  text-align: left;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--muted);
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--line);
+  white-space: nowrap;
+}
+
+.sd-table tbody td {
+  padding: 16px;
+  font-size: 14px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: middle;
+}
+
+.sd-table tbody tr:hover {
+  background: var(--surface-alt);
+}
+
+.sd-muted {
+  color: var(--muted);
+}
+
+.sd-strong {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.sd-store {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sd-store__name {
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: 0.02em;
+}
+
+.sd-logo {
+  width: 34px;
+  height: 34px;
+  flex: none;
+  border-radius: 8px;
+  background: var(--navy-900);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.sd-empty {
+  text-align: center;
+  color: var(--muted);
+  padding: 40px 16px;
+  font-size: 14px;
+}
+
+/* ── Status pill ──────────────────────────────────── */
+.sd-pill {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+}
+
+.sd-pill--active {
+  background: var(--success-bg);
+  color: var(--success-text);
+}
+
+.sd-pill--inactive {
+  background: var(--neutral-bg);
+  color: var(--neutral-text);
+}
+
+/* ── Footer / pager ───────────────────────────────── */
+.sd-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 18px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.sd-count {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.sd-pager {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sd-pager__btn {
+  min-width: 40px;
+  height: 36px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--body);
+}
+
+.sd-pager__btn:disabled {
+  color: var(--faint);
+  cursor: default;
+}
+
+.sd-pager__btn--active {
+  background: var(--navy-900);
+  border-color: var(--navy-900);
+  color: #fff;
+}
